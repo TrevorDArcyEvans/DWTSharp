@@ -27,7 +27,9 @@ public static class DWTHaar
     }
 
     for (var i = 0; i < data.Length; i++)
+    {
       data[i] = temp[i];
+    }
   }
 
   /// <summary>
@@ -49,12 +51,16 @@ public static class DWTHaar
       for (var i = 0; i < levRows; i++)
       {
         for (var j = 0; j < row.Length; j++)
+        {
           row[j] = data[i, j];
+        }
 
         FWT(row);
 
         for (var j = 0; j < row.Length; j++)
+        {
           data[i, j] = row[j];
+        }
       }
 
 
@@ -62,12 +68,16 @@ public static class DWTHaar
       for (var j = 0; j < levCols; j++)
       {
         for (var i = 0; i < col.Length; i++)
+        {
           col[i] = data[i, j];
+        }
 
         FWT(col);
 
         for (var i = 0; i < col.Length; i++)
+        {
           data[i, j] = col[i];
+        }
       }
     }
   }
@@ -88,7 +98,9 @@ public static class DWTHaar
     }
 
     for (var i = 0; i < data.Length; i++)
+    {
       data[i] = temp[i];
+    }
   }
 
   /// <summary>
@@ -99,9 +111,6 @@ public static class DWTHaar
     var rows = data.GetLength(0);
     var cols = data.GetLength(1);
 
-    double[] col;
-    double[] row;
-
     for (var k = iterations - 1; k >= 0; k--)
     {
       var lev = 1 << k;
@@ -109,28 +118,36 @@ public static class DWTHaar
       var levCols = cols / lev;
       var levRows = rows / lev;
 
-      col = new double[levRows];
+      var col = new double[levRows];
       for (var j = 0; j < levCols; j++)
       {
         for (var i = 0; i < col.Length; i++)
+        {
           col[i] = data[i, j];
+        }
 
         IWT(col);
 
         for (var i = 0; i < col.Length; i++)
+        {
           data[i, j] = col[i];
+        }
       }
 
-      row = new double[levCols];
+      var row = new double[levCols];
       for (var i = 0; i < levRows; i++)
       {
         for (var j = 0; j < row.Length; j++)
+        {
           row[j] = data[i, j];
+        }
 
         IWT(row);
 
         for (var j = 0; j < row.Length; j++)
+        {
           data[i, j] = row[j];
+        }
       }
     }
   }
