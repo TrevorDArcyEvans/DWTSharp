@@ -1,7 +1,6 @@
-﻿using System.Numerics;
+﻿namespace DWTSharp;
 
-namespace DWTSharp;
-
+using System.Numerics;
 using CommandLine;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
