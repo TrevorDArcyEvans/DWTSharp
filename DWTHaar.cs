@@ -3,7 +3,7 @@ namespace DWTSharp;
 /// <summary>
 /// https://www.codeproject.com/Articles/683663/Discrete-Haar-Wavelet-Transformation
 /// </summary>
-public class DWTHaar
+public static class DWTHaar
 {
   private const double w0 = 0.5;
   private const double w1 = -0.5;
@@ -14,7 +14,7 @@ public class DWTHaar
   ///   Discrete Haar Wavelet Transform
   /// </summary>
   /// 
-  public void FWT(double[] data)
+  public static void FWT(double[] data)
   {
     double[] temp = new double[data.Length];
 
@@ -33,7 +33,7 @@ public class DWTHaar
   /// <summary>
   ///   Discrete Haar Wavelet 2D Transform
   /// </summary>
-  public void FWT(double[,] data, int iterations)
+  public static void FWT(double[,] data, int iterations)
   {
     int rows = data.GetLength(0);
     int cols = data.GetLength(1);
@@ -78,7 +78,7 @@ public class DWTHaar
   /// <summary>
   ///   Inverse Haar Wavelet Transform
   /// </summary>
-  public void IWT(double[] data)
+  public static void IWT(double[] data)
   {
     double[] temp = new double[data.Length];
 
@@ -97,7 +97,7 @@ public class DWTHaar
   /// <summary>
   ///   Inverse Haar Wavelet 2D Transform
   /// </summary>
-  public void IWT(double[,] data, int iterations)
+  public static void IWT(double[,] data, int iterations)
   {
     int rows = data.GetLength(0);
     int cols = data.GetLength(1);
