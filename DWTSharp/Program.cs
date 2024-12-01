@@ -7,28 +7,6 @@ using SixLabors.ImageSharp.PixelFormats;
 
 internal static class Program
 {
-  public static async Task Main(string[] args)
-  {
-    var result = await Parser.Default.ParseArguments<Options>(args)
-      .WithParsedAsync(Run);
-    await result.WithNotParsedAsync(HandleParseError);
-  }
-
-  private static async Task Run(Options opt)
-  {
-    var img1 = await Image.LoadAsync<Rgba32>(opt.ImageFile1Path);
-    var img2 = await Image.LoadAsync<Rgba32>(opt.ImageFile2Path);
-    var data1 = ImageDecomposition.GetGrayscaleDate(img1, opt.HashSize);
-    var data2 = ImageDecomposition.GetGrayscaleDate(img2, opt.HashSize);
-    DWTHaar.FWT(data1, 1);
-    DWTHaar.FWT(data2, 1);
-
-    var match = (1d - Distance(data1, data2)) * 100d;
-    Console.WriteLine($"ImageFile1 = {opt.ImageFile1Path}");
-    Console.WriteLine($"ImageFile2 = {opt.ImageFile2Path}");
-    Console.WriteLine($"  Match = {match:F1}%");
-  }
-
   private static double Average<T>(T[,] data) where T : INumber<T>
   {
     var sum = 0d;
