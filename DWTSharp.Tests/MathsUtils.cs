@@ -1,11 +1,8 @@
-﻿namespace DWTSharp;
+﻿namespace DWTSharp.Tests;
 
 using System.Numerics;
-using CommandLine;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 
-internal static class Program
+internal static class MathsUtils
 {
   private static double Average<T>(T[,] data) where T : INumber<T>
   {
@@ -36,23 +33,5 @@ internal static class Program
     }
 
     return Math.Sqrt(sumDistSq / (data1.GetLength(0) * data1.GetLength(1)));
-  }
-
-  private static Task HandleParseError(IEnumerable<Error> errs)
-  {
-    if (errs.IsVersion())
-    {
-      Console.WriteLine("Version Request");
-      return Task.CompletedTask;
-    }
-
-    if (errs.IsHelp())
-    {
-      Console.WriteLine("Help Request");
-      return Task.CompletedTask;
-    }
-
-    Console.WriteLine("Parser Fail");
-    return Task.CompletedTask;
   }
 }
