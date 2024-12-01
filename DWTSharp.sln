@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp", "DWTSharp.csproj", "{556FEDC6-88F2-4ADE-B380-064818EB1D91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp", "DWTSharp\DWTSharp.csproj", "{556FEDC6-88F2-4ADE-B380-064818EB1D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp.Tests", "DWTSharp.Tests\DWTSharp.Tests.csproj", "{AAB134D6-9F29-40A5-89E0-C6FB47614378}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{556FEDC6-88F2-4ADE-B380-064818EB1D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{556FEDC6-88F2-4ADE-B380-064818EB1D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{556FEDC6-88F2-4ADE-B380-064818EB1D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
