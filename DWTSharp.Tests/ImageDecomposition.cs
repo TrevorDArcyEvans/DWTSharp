@@ -1,4 +1,4 @@
-﻿namespace DWTSharp;
+﻿namespace DWTSharp.Tests;
 
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
