@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp", "DWTSharp\DWTSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp.Tests", "DWTSharp.Tests\DWTSharp.Tests.csproj", "{AAB134D6-9F29-40A5-89E0-C6FB47614378}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DWTSharp.UI.CLI", "DWTSharp.UI.CLI\DWTSharp.UI.CLI.csproj", "{35A7C55D-DB51-4907-A4CB-6C546E6A6CDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB134D6-9F29-40A5-89E0-C6FB47614378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A7C55D-DB51-4907-A4CB-6C546E6A6CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A7C55D-DB51-4907-A4CB-6C546E6A6CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A7C55D-DB51-4907-A4CB-6C546E6A6CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A7C55D-DB51-4907-A4CB-6C546E6A6CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
