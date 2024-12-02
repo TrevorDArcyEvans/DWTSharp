@@ -1,5 +1,6 @@
 ﻿namespace DWTSharp.Tests;
 
+using static ImageDecomposition;
 using FluentAssertions;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -10,7 +11,7 @@ public sealed class DWTHaar_Tests
   public void FWT_IWT_succeeds()
   {
     var img = Image.Load<Rgba32>("images/AlysonHannigan_0.jpg");
-    var data = ImageDecomposition.GetGrayscaleDate(img);
+    var data = GetGrayscaleDate(img);
     var copy = (double[,])data.Clone();
 
     DWTHaar.FWT(data, 1);

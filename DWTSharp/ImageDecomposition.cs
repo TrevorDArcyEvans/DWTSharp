@@ -1,10 +1,10 @@
-﻿namespace DWTSharp.Tests;
+﻿namespace DWTSharp;
 
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 
-internal static class ImageDecomposition
+public static class ImageDecomposition
 {
   public static double[,] GetGrayscaleDate(Image<Rgba32> img, int hashSideSize = 256)
   {
